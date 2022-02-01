@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="Task1.css" />
+    <!--title of the page-->
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+<h1> Welcome to Rock Paper Scissors Game</h1>
+<div class="images">
+    <div class="row-one">
+        <img class="image" src="scissors.png" onclick="playGame('scissors')" />
+    </div>
+    <div class="row-two">
+        <img class="image" src="rock.png" onclick="playGame('rock')"/>
+        <img class="image"  src="paper.png" onclick="playGame('paper')"/>
+    </div>
+</div>
+<div id="output">
+    <p id="User-choice"></p>
+    <p id="Bot-choice"></p>
+    <p id="Result"></p>
+</div>
+<!-- calling JavaScript -->
+<script src="Task1.js"></script>
+</body>
+</html>

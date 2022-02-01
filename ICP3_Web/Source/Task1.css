@@ -1,0 +1,31 @@
+.images {
+    display: flex;
+    align-items:center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+.header {
+    text-align: center;
+    margin: 20px 10px
+}
+.row-one{
+    height: 200px;
+}
+.image {
+    object-fit: contain;
+    width: 100%;
+    height: 200px;
+}
+#output {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#output p {
+    font-size: 20px;
+    font-weight: bold;
+}
+p#result {
+    font-size: 40px;
+}
