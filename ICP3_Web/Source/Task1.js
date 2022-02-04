@@ -1,59 +1,33 @@
-// user choice input
-const getPlayerChoice = PlayerInput =>{
-    PlayerInput = PlayerInput.toLowerCase();
-    if (PlayerInput === 'rock' || PlayerInput ==='paper' || PlayerInput ==='scissors') {
-        return PlayerInput;
-    } else {
-        console.log('not a valid choice');
-    }
-};
-
-// Creating computer choice:
-function getComputerChoice() {
-    switch(Math.floor(Math.random()*3)) {
-        case 0:
-            return 'rock';
-            break;
-        case 1:
-            return 'scissors';
-            break;
-        case 2:
-            return 'paper';
-            break;
-    };
-}
-
-//  winner of the game:
-
-function gameWinner(PlayerChoice,computerChoice) {
-    if (PlayerChoice === computerChoice) {
-        return 'It\'s a tie!';
-    } else if (PlayerChoice === 'rock') {
-        if (computerChoice === 'paper') {
-            return 'Computer won!';
-        } else {
-            return 'You won!';
-        }
-    } else if (PlayerChoice === 'paper'){
-        if (computerChoice === 'scissors') {
-            return 'Computer won!';
-        }else {
-            return 'You won!';
-        }
-    } else if (PlayerChoice === 'scissors') {
-        if (computerChoice === 'rock') {
-            return 'Computer won!';
-        } else {
-            return 'You won!';
-        }
-    }
-};
-
 // Calling the playGame function:
-function playGame(choice) {
-    var PlayerChoice = getPlayerChoice(choice);
-    var computerChoice = getComputerChoice()
-    document.getElementById('Player-choice').innerHTML = `Player Selected : ${PlayerChoice}`;
-    document.getElementById('computer-choice').innerHTML = `Computer Selected : ${computerChoice}`;
-    document.getElementById('final-result').innerHTML = gameWinner(PlayerChoice, computerChoice);
+function playGame(playerChoice) {
+
+    // map integer with action, 0 means scissors and 1 means rock and 2 means paper
+    const map = ["scissors", "rock", "paper"];
+
+    // random integer from 0,1,2
+    const computerChoice = Math.floor(Math.random()*3);
+
+    // Game deciding message
+    let message;
+
+    // tie condition
+    if(playerChoice == computerChoice) {
+        message = "It's a tie";
+    }
+    // computer winning conditions
+    else if((playerChoice == 0 && computerChoice == 1) || (playerChoice == 1 && computerChoice == 2) || (playerChoice == 2 && computerChoice == 0))
+    {
+        message = "Computer Won";
+    }
+    // player winning conditions
+    else {
+        message = "You Won";
+    }
+
+    // displaying the player choice
+    document.getElementById('Player-choice').innerHTML = `You Selected : ${map[playerChoice]}`;
+    // displaying the computer choice
+    document.getElementById('computer-choice').innerHTML = `Computer Selected : ${map[computerChoice]}`;
+    // displaying the final result
+    document.getElementById('Final').innerHTML = message;
 };

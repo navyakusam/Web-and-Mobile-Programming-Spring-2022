@@ -21,7 +21,7 @@ body {
     height: 500px;
     color: darkblue;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     background-position: left;
     background-repeat: no-repeat;
     background-size: cover;
@@ -32,7 +32,7 @@ body {
     margin-bottom: 20px;
 }
 .wrapper .highlight {
-    color:orangered;
+    color:deeppink;
     font-family: monospace;
     font-style: italic;
     font-size: 30px;
@@ -42,7 +42,7 @@ body {
     border: 1px solid black;
     border-radius: 15px;
     padding: 5px;
-    background-color:rgb(21, 214, 134);
+    background-color:powderblue;
     color: black;
 }
 .col .image {
